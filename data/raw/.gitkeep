@@ -1,0 +1,5 @@
+@Kunj6354 Hi Kunj, could you please review the MSME_UDYAM_STATEWISE source?
+
+The official page (https://dashboard.msme.gov.in/Udyam_Statewise.aspx) is accessible, but it only displays "Total:-" and the download returns an empty spreadsheet. Because of this, I couldn't validate the dataset. I've kept the source as pending_validation.
+
+Could you confirm whether there is an alternative official source for this dataset or whether we should keep it as pending_validation?
