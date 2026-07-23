@@ -1,4 +1,4 @@
-.PHONY: setup validate test lint check
+.PHONY: setup validate validate-strict test lint format format-check check
 
 setup:
 	python3 -m venv .venv
@@ -6,12 +6,21 @@ setup:
 	.venv/bin/python -m pip install -e '.[dev]'
 
 validate:
-	.venv/bin/python scripts/validate_source_registry.py
+	python scripts/validate_source_registry.py
+
+validate-strict:
+	python scripts/validate_source_registry.py --strict
 
 test:
-	.venv/bin/pytest -q
+	pytest -q
 
 lint:
-	.venv/bin/ruff check src scripts tests
+	ruff check src scripts tests
 
-check: validate lint test
+format:
+	ruff format src scripts tests
+
+format-check:
+	ruff format --check src scripts tests
+
+check: validate lint format-check test
