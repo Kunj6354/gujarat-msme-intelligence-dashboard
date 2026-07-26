@@ -1,15 +1,9 @@
 source_id,original_column,column_description,data_type,required_for_mvp,example_value,notes
-OGD_UDYAM_DISTRICT,LG_ST_Code,Local Government State Code,Integer,No,24,Government administrative code
-OGD_UDYAM_DISTRICT,State,State name,Text,Yes,Gujarat,State where the enterprise is registered
-OGD_UDYAM_DISTRICT,LG_DT_Code,Local Government District Code,Integer,No,(varies),Government district code
-OGD_UDYAM_DISTRICT,District name,District name,Text,Yes,Gandhinagar,District of registration
-OGD_UDYAM_DISTRICT,Postal PIN code,Postal PIN code,Integer,Yes,382010,Enterprise location PIN code
-OGD_UDYAM_DISTRICT,Date of Udyam registration,Date of Udyam registration,Date,Yes,6/15/2024,Registration date of the enterprise
-OGD_UDYAM_DISTRICT,Name of the registered enterprise,Name of the registered enterprise,Text,No,ABC Industries,Contains business names. Use carefully depending on project scope.
-OGD_UDYAM_DISTRICT,Registered communication address,Registered communication address,Text,No,"Sector-21, Gandhinagar",Contains address information. May not be required in dashboards
-OGD_UDYAM_DISTRICT,Registered business activities (NIC codes and descriptions),Registered business activities (NIC codes and descriptions),JSON / Text,Yes,"[{""NIC5DigitId"":""47190"",""Description"":""Other retail sale""}]",Nested JSON containing one or more business activities. May require parsing later (not during M0).
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
+OGD_UDYAM_DISTRICT,state_name,Full state/UT name,Text,No,ANDHRA PRADESH,"	Full state name"
+OGD_UDYAM_DISTRICT,state_id,"	Numeric code for state",Integer,No,"	28","	Numeric state code"
+OGD_UDYAM_DISTRICT,district_name,"	District name within state",Text,Yes,"	SRIKAKULAM",
+OGD_UDYAM_DISTRICT,lg_dt_code,Local government/district code (likely a standard admin code),Integer,Yes,"	519",
+OGD_UDYAM_DISTRICT,medium,Count of Medium enterprises registered under UDYAM,Integer,Yes,"	17","	Count of Medium enterprises registered under UDYAM for this district"
+OGD_UDYAM_DISTRICT,micro,Count of Micro enterprises registered under UDYAM,Integer,Yes,"	64721","	Count of Micro enterprises registered under UDYAM for this district"
+OGD_UDYAM_DISTRICT,small,Count of Small enterprises registered under UDYAM,Integer,Yes,"	409",Count of Small enterprises registered under UDYAM for this district
+OGD_UDYAM_DISTRICT,total,"	Sum of micro + small + medium for that district","	Integer",Yes,"	65147",
