@@ -87,3 +87,13 @@ Public Attribution
 Gujarat MSME Intelligence Dashboard — a public-data analytics proof of concept
 by StackOre Technologies, built using official Government of India open data.
 Not an official government product.
+
+## Cross-platform quality check
+
+Linux, macOS and Windows contributors can run the same repository checks with:
+
+```bash
+python scripts/run_quality_checks.py
+```
+
+This validates the source registry, automated tests, Ruff lint rules and Python formatting.
