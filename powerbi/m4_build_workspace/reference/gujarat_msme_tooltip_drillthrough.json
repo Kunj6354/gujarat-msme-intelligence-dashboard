@@ -1,0 +1,113 @@
+{
+  "assignment_rules": [
+    {
+      "drillthrough_page_id": "district_drillthrough",
+      "source_page_id": "executive_overview",
+      "source_visual_id": "p1_top10_chart",
+      "tooltip_page_id": "district_tooltip"
+    },
+    {
+      "drillthrough_page_id": "district_drillthrough",
+      "source_page_id": "district_comparison",
+      "source_visual_id": "p2_rank_chart",
+      "tooltip_page_id": "district_tooltip"
+    },
+    {
+      "drillthrough_page_id": "district_drillthrough",
+      "source_page_id": "district_comparison",
+      "source_visual_id": "p2_contribution_chart",
+      "tooltip_page_id": "district_tooltip"
+    },
+    {
+      "drillthrough_page_id": "district_drillthrough",
+      "source_page_id": "category_analysis",
+      "source_visual_id": "p3_stacked_chart",
+      "tooltip_page_id": "district_tooltip"
+    },
+    {
+      "drillthrough_page_id": "district_drillthrough",
+      "source_page_id": "category_analysis",
+      "source_visual_id": "p3_medium_share",
+      "tooltip_page_id": "district_tooltip"
+    }
+  ],
+  "technical_pages": [
+    {
+      "display_fields": [
+        "district_name",
+        "lg_dt_code",
+        "district_rank_total",
+        "dominant_category"
+      ],
+      "display_measures": [
+        "Total Registered Enterprises",
+        "Micro Registered Enterprises",
+        "Small Registered Enterprises",
+        "Medium Registered Enterprises",
+        "Selected District Contribution %"
+      ],
+      "display_name": "District Tooltip",
+      "hidden": true,
+      "page_id": "district_tooltip",
+      "page_size": {
+        "height": 280,
+        "width": 360
+      },
+      "page_type": "tooltip",
+      "source_visual_types": [
+        "clustered_bar_chart",
+        "bar_chart",
+        "stacked_bar_chart",
+        "donut_chart"
+      ],
+      "trigger_fields": [
+        "district_name"
+      ]
+    },
+    {
+      "display_name": "District Detail",
+      "drillthrough_fields": [
+        "district_name",
+        "lg_dt_code"
+      ],
+      "hidden": true,
+      "keep_all_filters": true,
+      "page_id": "district_drillthrough",
+      "page_size": {
+        "height": 720,
+        "width": 1280
+      },
+      "page_type": "drillthrough",
+      "visuals": [
+        {
+          "measure": "Total Registered Enterprises",
+          "visual_id": "dt_total_card",
+          "visual_type": "card"
+        },
+        {
+          "measures": [
+            "Micro Registered Enterprises",
+            "Small Registered Enterprises",
+            "Medium Registered Enterprises"
+          ],
+          "visual_id": "dt_category_chart",
+          "visual_type": "clustered_column_chart"
+        },
+        {
+          "fields": [
+            "micro_share_pct",
+            "small_share_pct",
+            "medium_share_pct",
+            "gujarat_total_share_pct"
+          ],
+          "visual_id": "dt_share_table",
+          "visual_type": "table"
+        },
+        {
+          "visual_id": "dt_back_button",
+          "visual_type": "back_button"
+        }
+      ]
+    }
+  ]
+}
