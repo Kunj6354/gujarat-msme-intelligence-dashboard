@@ -1,0 +1,8 @@
+page_order,page_name,page_type,build_status,screenshot_file,review_status,notes
+1,Gujarat Executive Overview,visible,NOT_STARTED,screenshots/01_executive_overview.png,NOT_REVIEWED,
+2,District Comparison,visible,NOT_STARTED,screenshots/02_district_comparison.png,NOT_REVIEWED,
+3,Enterprise Category Analysis,visible,NOT_STARTED,screenshots/03_category_analysis.png,NOT_REVIEWED,
+4,Data Availability and Limitations,visible,NOT_STARTED,screenshots/04_data_availability.png,NOT_REVIEWED,
+5,Sources and Methodology,visible,NOT_STARTED,screenshots/05_sources_methodology.png,NOT_REVIEWED,
+6,District Tooltip,hidden_tooltip,NOT_STARTED,screenshots/06_district_tooltip.png,NOT_REVIEWED,
+7,District Detail,hidden_drillthrough,NOT_STARTED,screenshots/07_district_drillthrough.png,NOT_REVIEWED,
