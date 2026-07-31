@@ -9,8 +9,11 @@ from typing import Any
 
 import pandas as pd
 
+from msme_dashboard.district_metrics import (
+    DERIVED_COLUMNS,
+    add_district_analytical_metrics,
+)
 from msme_dashboard.district_pipeline import (
-    REQUIRED_COLUMNS,
     build_gujarat_district_dataset,
     validate_district_dataset,
 )
@@ -64,7 +67,8 @@ def create_output_metadata(
         "source_as_of_date": source_as_of_date,
         "generated_at_utc": generated_at,
         "output_file_name": output_path.name,
-        "columns": list(REQUIRED_COLUMNS),
+        "columns": list(frame.columns),
+        "derived_columns": [column for column in DERIVED_COLUMNS if column in frame.columns],
         **summary,
         "transformations": [
             "Loaded the official national district aggregate CSV.",
@@ -74,7 +78,10 @@ def create_output_metadata(
             "Validated unique state and district-code keys.",
             "Validated total equals micro plus small plus medium.",
             "Filtered records to Gujarat only.",
-            "Sorted records by district name and district code.",
+            "Calculated district rankings and category shares.",
+            "Calculated each district's contribution to the Gujarat total.",
+            "Assigned dominant-category and Top/Bottom 10 indicators.",
+            "Sorted records by descending total registrations.",
         ],
         "limitations": [
             "Registration counts do not prove that enterprises are currently active.",
@@ -95,6 +102,7 @@ def write_processed_district_outputs(
     """Generate the processed Gujarat CSV and metadata JSON."""
 
     frame = build_gujarat_district_dataset(source_path)
+    frame = add_district_analytical_metrics(frame)
 
     output_csv_path.parent.mkdir(
         parents=True,
