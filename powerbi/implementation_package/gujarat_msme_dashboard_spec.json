@@ -1,0 +1,496 @@
+{
+  "asset_schema_version": "1.0",
+  "dashboard_name": "Gujarat MSME Intelligence Dashboard",
+  "global_rules": [
+    "Dashboard scope is Gujarat district aggregate data.",
+    "No identifiable enterprise-level data is permitted.",
+    "Source reporting dates must be displayed and preserved.",
+    "Unsupported activity and employment data must not be inferred.",
+    "Registration counts must not be described as active businesses.",
+    "LGD district codes must remain text identifiers."
+  ],
+  "main_table_name": "Gujarat MSME Districts",
+  "measure_names": [
+    "Total Registered Enterprises",
+    "Micro Registered Enterprises",
+    "Small Registered Enterprises",
+    "Medium Registered Enterprises",
+    "District Count",
+    "Average Registrations per District",
+    "Micro Share %",
+    "Small Share %",
+    "Medium Share %",
+    "Selected District Contribution %",
+    "Highest Registered District",
+    "Lowest Registered District",
+    "Top 10 District Flag",
+    "Bottom 10 District Flag"
+  ],
+  "page_count": 5,
+  "pages": [
+    {
+      "objective": "Present the main Gujarat UDYAM registration KPIs and the leading district-level patterns.",
+      "page_filters": [
+        "district_name"
+      ],
+      "page_id": "executive_overview",
+      "page_name": "Gujarat Executive Overview",
+      "page_number": 1,
+      "visuals": [
+        {
+          "dataset": "district_fact",
+          "fields": [],
+          "interactions": "",
+          "measures": [
+            "Total Registered Enterprises"
+          ],
+          "purpose": "Display the Gujarat registration total.",
+          "title": "Total Registered Enterprises",
+          "visual_id": "p1_total_card",
+          "visual_type": "card"
+        },
+        {
+          "dataset": "district_fact",
+          "fields": [],
+          "interactions": "",
+          "measures": [
+            "Micro Registered Enterprises"
+          ],
+          "purpose": "Display total Micro registrations.",
+          "title": "Micro Enterprises",
+          "visual_id": "p1_micro_card",
+          "visual_type": "card"
+        },
+        {
+          "dataset": "district_fact",
+          "fields": [],
+          "interactions": "",
+          "measures": [
+            "Small Registered Enterprises"
+          ],
+          "purpose": "Display total Small registrations.",
+          "title": "Small Enterprises",
+          "visual_id": "p1_small_card",
+          "visual_type": "card"
+        },
+        {
+          "dataset": "district_fact",
+          "fields": [],
+          "interactions": "",
+          "measures": [
+            "Medium Registered Enterprises"
+          ],
+          "purpose": "Display total Medium registrations.",
+          "title": "Medium Enterprises",
+          "visual_id": "p1_medium_card",
+          "visual_type": "card"
+        },
+        {
+          "dataset": "district_fact",
+          "fields": [],
+          "interactions": "",
+          "measures": [
+            "District Count"
+          ],
+          "purpose": "Display the number of Gujarat districts.",
+          "title": "Districts Covered",
+          "visual_id": "p1_district_count",
+          "visual_type": "card"
+        },
+        {
+          "dataset": "district_fact",
+          "fields": [],
+          "interactions": "",
+          "measures": [
+            "Highest Registered District"
+          ],
+          "purpose": "Identify the highest-registration district.",
+          "title": "Highest Registered District",
+          "visual_id": "p1_top_district",
+          "visual_type": "card"
+        },
+        {
+          "dataset": "district_fact",
+          "fields": [
+            "district_name",
+            "total",
+            "district_rank_total"
+          ],
+          "interactions": "Filtered where top_10_flag is true.",
+          "measures": [],
+          "purpose": "Compare the ten highest-registration districts.",
+          "title": "Top 10 Gujarat Districts",
+          "visual_id": "p1_top10_chart",
+          "visual_type": "clustered_bar_chart"
+        },
+        {
+          "dataset": "district_fact",
+          "fields": [],
+          "interactions": "",
+          "measures": [
+            "Micro Registered Enterprises",
+            "Small Registered Enterprises",
+            "Medium Registered Enterprises"
+          ],
+          "purpose": "Show Gujarat registration composition.",
+          "title": "Enterprise Category Share",
+          "visual_id": "p1_category_share",
+          "visual_type": "donut_chart"
+        }
+      ]
+    },
+    {
+      "objective": "Rank and compare Gujarat districts using total registrations and Gujarat contribution.",
+      "page_filters": [
+        "district_name",
+        "dominant_category",
+        "top_10_flag",
+        "bottom_10_flag"
+      ],
+      "page_id": "district_comparison",
+      "page_name": "District Comparison",
+      "page_number": 2,
+      "visuals": [
+        {
+          "dataset": "district_fact",
+          "fields": [
+            "district_name"
+          ],
+          "interactions": "",
+          "measures": [],
+          "purpose": "Filter the page to selected districts.",
+          "title": "Select District",
+          "visual_id": "p2_district_slicer",
+          "visual_type": "slicer"
+        },
+        {
+          "dataset": "district_fact",
+          "fields": [
+            "district_name",
+            "total",
+            "district_rank_total"
+          ],
+          "interactions": "",
+          "measures": [],
+          "purpose": "Compare districts by total registrations.",
+          "title": "District Registration Ranking",
+          "visual_id": "p2_rank_chart",
+          "visual_type": "clustered_bar_chart"
+        },
+        {
+          "dataset": "district_fact",
+          "fields": [
+            "district_name",
+            "gujarat_total_share_pct"
+          ],
+          "interactions": "",
+          "measures": [],
+          "purpose": "Show each district's Gujarat contribution.",
+          "title": "Contribution to Gujarat Total",
+          "visual_id": "p2_contribution_chart",
+          "visual_type": "bar_chart"
+        },
+        {
+          "dataset": "district_fact",
+          "fields": [
+            "district_name",
+            "lg_dt_code",
+            "micro",
+            "small",
+            "medium",
+            "total",
+            "district_rank_total",
+            "gujarat_total_share_pct"
+          ],
+          "interactions": "",
+          "measures": [],
+          "purpose": "Provide sortable district-level detail.",
+          "title": "District Ranking Table",
+          "visual_id": "p2_rank_table",
+          "visual_type": "table"
+        },
+        {
+          "dataset": "district_fact",
+          "fields": [],
+          "interactions": "",
+          "measures": [
+            "Average Registrations per District"
+          ],
+          "purpose": "Display the Gujarat district average.",
+          "title": "Average Registrations per District",
+          "visual_id": "p2_average_card",
+          "visual_type": "card"
+        },
+        {
+          "dataset": "district_fact",
+          "fields": [],
+          "interactions": "",
+          "measures": [
+            "Selected District Contribution %"
+          ],
+          "purpose": "Display selected district contribution.",
+          "title": "Selected District Contribution",
+          "visual_id": "p2_selected_share",
+          "visual_type": "card"
+        }
+      ]
+    },
+    {
+      "objective": "Compare Micro, Small and Medium registration composition across Gujarat districts.",
+      "page_filters": [
+        "district_name",
+        "dominant_category"
+      ],
+      "page_id": "category_analysis",
+      "page_name": "Enterprise Category Analysis",
+      "page_number": 3,
+      "visuals": [
+        {
+          "dataset": "district_fact",
+          "fields": [],
+          "interactions": "",
+          "measures": [
+            "Micro Registered Enterprises",
+            "Small Registered Enterprises",
+            "Medium Registered Enterprises"
+          ],
+          "purpose": "Display Gujarat category totals.",
+          "title": "Category Totals",
+          "visual_id": "p3_category_cards",
+          "visual_type": "multi_row_card"
+        },
+        {
+          "dataset": "district_fact",
+          "fields": [
+            "district_name",
+            "micro",
+            "small",
+            "medium"
+          ],
+          "interactions": "",
+          "measures": [],
+          "purpose": "Compare category volumes by district.",
+          "title": "District Category Composition",
+          "visual_id": "p3_stacked_chart",
+          "visual_type": "stacked_bar_chart"
+        },
+        {
+          "dataset": "district_fact",
+          "fields": [
+            "district_name",
+            "micro_share_pct",
+            "small_share_pct",
+            "medium_share_pct",
+            "dominant_category"
+          ],
+          "interactions": "",
+          "measures": [],
+          "purpose": "Compare category percentages.",
+          "title": "District Category Shares",
+          "visual_id": "p3_share_matrix",
+          "visual_type": "matrix"
+        },
+        {
+          "dataset": "district_fact",
+          "fields": [
+            "district_name",
+            "medium_share_pct"
+          ],
+          "interactions": "",
+          "measures": [],
+          "purpose": "Identify districts with higher Medium share.",
+          "title": "Districts by Medium Share",
+          "visual_id": "p3_medium_share",
+          "visual_type": "bar_chart"
+        },
+        {
+          "dataset": "district_fact",
+          "fields": [
+            "dominant_category"
+          ],
+          "interactions": "",
+          "measures": [],
+          "purpose": "Filter districts by dominant category.",
+          "title": "Dominant Category",
+          "visual_id": "p3_dominant_slicer",
+          "visual_type": "slicer"
+        }
+      ]
+    },
+    {
+      "objective": "Explain data coverage, validation status and fields that are not available at district level.",
+      "page_filters": [],
+      "page_id": "data_availability",
+      "page_name": "Data Availability and Limitations",
+      "page_number": 4,
+      "visuals": [
+        {
+          "dataset": "metadata",
+          "fields": [
+            "source_id",
+            "source_as_of_date",
+            "generated_at_utc",
+            "row_count",
+            "district_count"
+          ],
+          "interactions": "",
+          "measures": [],
+          "purpose": "Show source and output status.",
+          "title": "Source Validation Status",
+          "visual_id": "p4_source_status",
+          "visual_type": "reference_table"
+        },
+        {
+          "dataset": "metadata",
+          "fields": [
+            "source_file_name",
+            "source_sha256"
+          ],
+          "interactions": "",
+          "measures": [],
+          "purpose": "Display source-file traceability.",
+          "title": "Source Integrity",
+          "visual_id": "p4_checksum",
+          "visual_type": "reference_card"
+        },
+        {
+          "dataset": "static",
+          "fields": [],
+          "interactions": "",
+          "measures": [],
+          "purpose": "State that district-level Manufacturing, Service and Trading fields are unavailable.",
+          "title": "Activity-Type Data",
+          "visual_id": "p4_activity_notice",
+          "visual_type": "static_notice"
+        },
+        {
+          "dataset": "static",
+          "fields": [],
+          "interactions": "",
+          "measures": [],
+          "purpose": "State that compliant district-level employment data is unavailable and is not inferred.",
+          "title": "Employment Data",
+          "visual_id": "p4_employment_notice",
+          "visual_type": "static_notice"
+        },
+        {
+          "dataset": "static",
+          "fields": [],
+          "interactions": "",
+          "measures": [],
+          "purpose": "Clarify that registrations are not equivalent to active businesses, revenue or profitability.",
+          "title": "Interpretation Warning",
+          "visual_id": "p4_interpretation_notice",
+          "visual_type": "static_notice"
+        }
+      ]
+    },
+    {
+      "objective": "Document source provenance, output generation, field definitions and governance rules.",
+      "page_filters": [],
+      "page_id": "sources_methodology",
+      "page_name": "Sources and Methodology",
+      "page_number": 5,
+      "visuals": [
+        {
+          "dataset": "metadata",
+          "fields": [
+            "source_id",
+            "source_file_name",
+            "source_as_of_date",
+            "source_sha256"
+          ],
+          "interactions": "",
+          "measures": [],
+          "purpose": "Document the approved source snapshot.",
+          "title": "Primary Source",
+          "visual_id": "p5_source_details",
+          "visual_type": "reference_table"
+        },
+        {
+          "dataset": "manifest",
+          "fields": [
+            "bundle_schema_version",
+            "district_row_count",
+            "ranking_row_count",
+            "data_dictionary_row_count"
+          ],
+          "interactions": "",
+          "measures": [],
+          "purpose": "Document generated Power BI assets.",
+          "title": "Generated Package",
+          "visual_id": "p5_bundle_details",
+          "visual_type": "reference_table"
+        },
+        {
+          "dataset": "static",
+          "fields": [],
+          "interactions": "",
+          "measures": [],
+          "purpose": "Explain filtering, validation, ranking, percentage calculations and checksum generation.",
+          "title": "Transformation Methodology",
+          "visual_id": "p5_methodology",
+          "visual_type": "static_text"
+        },
+        {
+          "dataset": "static",
+          "fields": [],
+          "interactions": "",
+          "measures": [],
+          "purpose": "Display field name, type, origin, description and calculation from the generated dictionary.",
+          "title": "Field Dictionary",
+          "visual_id": "p5_field_dictionary",
+          "visual_type": "reference_table"
+        },
+        {
+          "dataset": "static",
+          "fields": [],
+          "interactions": "",
+          "measures": [],
+          "purpose": "Document aggregate-only usage, date preservation and prohibition of identifiable records.",
+          "title": "Data Governance",
+          "visual_id": "p5_governance",
+          "visual_type": "static_text"
+        }
+      ]
+    }
+  ],
+  "prepared_for": "StackOre Technologies",
+  "supported_datasets": {
+    "district_fact": [
+      "bottom_10_flag",
+      "district_name",
+      "district_rank_total",
+      "district_rank_total_ascending",
+      "dominant_category",
+      "gujarat_total_share_pct",
+      "lg_dt_code",
+      "medium",
+      "medium_share_pct",
+      "micro",
+      "micro_share_pct",
+      "small",
+      "small_share_pct",
+      "state_id",
+      "state_name",
+      "top_10_flag",
+      "total"
+    ],
+    "manifest": [
+      "bundle_schema_version",
+      "data_dictionary_row_count",
+      "district_row_count",
+      "ranking_row_count"
+    ],
+    "metadata": [
+      "district_count",
+      "generated_at_utc",
+      "row_count",
+      "source_as_of_date",
+      "source_file_name",
+      "source_id",
+      "source_sha256"
+    ],
+    "static": []
+  }
+}

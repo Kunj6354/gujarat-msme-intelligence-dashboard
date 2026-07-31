@@ -1,0 +1,44 @@
+{
+  "acceptance_criteria_count": 18,
+  "asset_package_name": "Gujarat MSME Power BI Dashboard Implementation Assets",
+  "asset_schema_version": "1.0",
+  "dashboard_name": "Gujarat MSME Intelligence Dashboard",
+  "files": {
+    "acceptance_criteria": {
+      "file_name": "gujarat_msme_acceptance_criteria.csv",
+      "sha256": "8ccfe6fc89a88ce67d07059c1eb563c48e9e70c1e9445aa6ee0f6842dab3225d",
+      "size_bytes": 2472
+    },
+    "dashboard_specification": {
+      "file_name": "gujarat_msme_dashboard_spec.json",
+      "sha256": "1824f13c4bd09f74e7769bcf69be833f4ac2eecabb44a12f338f05ce81862791",
+      "size_bytes": 15425
+    },
+    "measures": {
+      "file_name": "gujarat_msme_measures.dax",
+      "sha256": "8eece161fbeb8f80a0b53254ddef5325f1d426c434b3e2d42e5e8778765e74b4",
+      "size_bytes": 1942
+    },
+    "theme": {
+      "file_name": "stackore_gujarat_msme_theme.json",
+      "sha256": "c7963e5be117fae1db1cbc56fa8fbb221382c110b4301555c134d5393325f816",
+      "size_bytes": 2217
+    },
+    "visual_inventory": {
+      "file_name": "gujarat_msme_visual_inventory.csv",
+      "sha256": "60bf0c6565a38934e1f28aeb6e7b015ef4eff8d84a81f743e1566b595a6ac58f",
+      "size_bytes": 5939
+    }
+  },
+  "generated_at_utc": "2026-07-31T05:55:45+00:00",
+  "governance": [
+    "The assets consume the validated M1 aggregate data package.",
+    "No identifiable enterprise-level fields are permitted.",
+    "Unsupported activity and employment fields are not inferred.",
+    "Final publication requires an approved M0 source snapshot."
+  ],
+  "measure_count": 14,
+  "page_count": 5,
+  "theme_status": "Prototype theme pending final StackOre brand-kit confirmation.",
+  "visual_count": 29
+}
