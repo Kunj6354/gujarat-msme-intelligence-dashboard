@@ -1,0 +1,71 @@
+{
+  "columns": [
+    "state_name",
+    "state_id",
+    "district_name",
+    "lg_dt_code",
+    "medium",
+    "micro",
+    "small",
+    "total",
+    "district_rank_total",
+    "district_rank_total_ascending",
+    "micro_share_pct",
+    "small_share_pct",
+    "medium_share_pct",
+    "gujarat_total_share_pct",
+    "dominant_category",
+    "top_10_flag",
+    "bottom_10_flag"
+  ],
+  "dataset_name": "Gujarat District MSME Aggregate Dataset",
+  "derived_columns": [
+    "district_rank_total",
+    "district_rank_total_ascending",
+    "micro_share_pct",
+    "small_share_pct",
+    "medium_share_pct",
+    "gujarat_total_share_pct",
+    "dominant_category",
+    "top_10_flag",
+    "bottom_10_flag"
+  ],
+  "district_count": 33,
+  "generated_at_utc": "2026-07-31T06:16:26+00:00",
+  "licence": "Government Open Data License - India (GODL-India)",
+  "limitations": [
+    "Registration counts do not prove that enterprises are currently active.",
+    "Registration counts do not represent revenue or profitability.",
+    "The output reflects the reporting date of the source dataset."
+  ],
+  "national_scope_limitation": "The source contains conflicting national state/district-code keys and is qualified only for Gujarat district analysis.",
+  "output_file_name": "gujarat_district_msme.csv",
+  "qualification_status": "qualified_for_gujarat_scope_only",
+  "registration_totals": {
+    "medium": 4245,
+    "micro": 2969687,
+    "small": 54335,
+    "total": 3028267
+  },
+  "retrieval_date": "2026-07-30",
+  "row_count": 33,
+  "schema_version": "1.0",
+  "source_as_of_date": null,
+  "source_file_name": "ogd_udyam_district_retrieved_2026-07-30.csv",
+  "source_id": "OGD_UDYAM_DISTRICT",
+  "source_sha256": "9236f99a4540c6215858c210970491a10462fb2027986232c64238cab76a0aca",
+  "source_url": "https://www.data.gov.in/resource/district-wise-total-msme-registered-enterprises-under-udyam-registration-till-last-date",
+  "transformations": [
+    "Loaded the official national district aggregate CSV.",
+    "Trimmed column names and required text fields.",
+    "Converted registration count columns to integers.",
+    "Validated non-negative registration counts.",
+    "Validated unique state and district-code keys.",
+    "Validated total equals micro plus small plus medium.",
+    "Filtered records to Gujarat only.",
+    "Calculated district rankings and category shares.",
+    "Calculated each district's contribution to the Gujarat total.",
+    "Assigned dominant-category and Top/Bottom 10 indicators.",
+    "Sorted records by descending total registrations."
+  ]
+}

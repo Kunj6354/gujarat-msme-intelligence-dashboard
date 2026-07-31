@@ -1,0 +1,94 @@
+{
+  "dashboard_asset_manifest": {
+    "acceptance_criteria": {
+      "file_name": "gujarat_msme_acceptance_criteria.csv",
+      "sha256": "8ccfe6fc89a88ce67d07059c1eb563c48e9e70c1e9445aa6ee0f6842dab3225d",
+      "size_bytes": 2472
+    },
+    "dashboard_specification": {
+      "file_name": "gujarat_msme_dashboard_spec.json",
+      "sha256": "1824f13c4bd09f74e7769bcf69be833f4ac2eecabb44a12f338f05ce81862791",
+      "size_bytes": 15425
+    },
+    "measures": {
+      "file_name": "gujarat_msme_measures.dax",
+      "sha256": "8eece161fbeb8f80a0b53254ddef5325f1d426c434b3e2d42e5e8778765e74b4",
+      "size_bytes": 1942
+    },
+    "theme": {
+      "file_name": "stackore_gujarat_msme_theme.json",
+      "sha256": "c7963e5be117fae1db1cbc56fa8fbb221382c110b4301555c134d5393325f816",
+      "size_bytes": 2217
+    },
+    "visual_inventory": {
+      "file_name": "gujarat_msme_visual_inventory.csv",
+      "sha256": "60bf0c6565a38934e1f28aeb6e7b015ef4eff8d84a81f743e1566b595a6ac58f",
+      "size_bytes": 5939
+    }
+  },
+  "files": {
+    "M2_POWERBI_IMPLEMENTATION_GUIDE.md": {
+      "file_name": "M2_POWERBI_IMPLEMENTATION_GUIDE.md",
+      "sha256": "911070d903599d939b684d14f1c7b9dfcd6d7b97f0e4d581cc95b36ea05fe7f0",
+      "size_bytes": 5448
+    },
+    "gujarat_msme_acceptance_criteria.csv": {
+      "file_name": "gujarat_msme_acceptance_criteria.csv",
+      "sha256": "8ccfe6fc89a88ce67d07059c1eb563c48e9e70c1e9445aa6ee0f6842dab3225d",
+      "size_bytes": 2472
+    },
+    "gujarat_msme_dashboard_assets_manifest.json": {
+      "file_name": "gujarat_msme_dashboard_assets_manifest.json",
+      "sha256": "480ef739dab30b56bee360b1fb430c3d0350efe1dc030eaf3efcb1bb409613d2",
+      "size_bytes": 1687
+    },
+    "gujarat_msme_dashboard_spec.json": {
+      "file_name": "gujarat_msme_dashboard_spec.json",
+      "sha256": "1824f13c4bd09f74e7769bcf69be833f4ac2eecabb44a12f338f05ce81862791",
+      "size_bytes": 15425
+    },
+    "gujarat_msme_interaction_rules.csv": {
+      "file_name": "gujarat_msme_interaction_rules.csv",
+      "sha256": "5071528178a5e7f62a61ba6c9570ac1f6c60d47c501ee0f62e1215c10d882563",
+      "size_bytes": 6032
+    },
+    "gujarat_msme_measures.dax": {
+      "file_name": "gujarat_msme_measures.dax",
+      "sha256": "8eece161fbeb8f80a0b53254ddef5325f1d426c434b3e2d42e5e8778765e74b4",
+      "size_bytes": 1942
+    },
+    "gujarat_msme_model_spec.json": {
+      "file_name": "gujarat_msme_model_spec.json",
+      "sha256": "3d6bd4b0698ee5423f1f27435eeb8d0c1711a2e6180bb3992e21b8d29a4bffd5",
+      "size_bytes": 3466
+    },
+    "gujarat_msme_page_layouts.csv": {
+      "file_name": "gujarat_msme_page_layouts.csv",
+      "sha256": "de05d190ea5af7a5a34b856e44cdda2116c3e6d852e9b93319a20e373ab333da",
+      "size_bytes": 2024
+    },
+    "gujarat_msme_tooltip_drillthrough.json": {
+      "file_name": "gujarat_msme_tooltip_drillthrough.json",
+      "sha256": "d9aefbc0836b71fd731e749fdb49a6aeb392afa7ff71ada0bf80bc77dcd15d1e",
+      "size_bytes": 3043
+    },
+    "gujarat_msme_visual_inventory.csv": {
+      "file_name": "gujarat_msme_visual_inventory.csv",
+      "sha256": "60bf0c6565a38934e1f28aeb6e7b015ef4eff8d84a81f743e1566b595a6ac58f",
+      "size_bytes": 5939
+    },
+    "stackore_gujarat_msme_theme.json": {
+      "file_name": "stackore_gujarat_msme_theme.json",
+      "sha256": "c7963e5be117fae1db1cbc56fa8fbb221382c110b4301555c134d5393325f816",
+      "size_bytes": 2217
+    }
+  },
+  "generated_at_utc": "2026-07-31T06:16:26+00:00",
+  "implementation_schema_version": "1.0",
+  "interaction_rule_count": 44,
+  "package_name": "Gujarat MSME Power BI Implementation Package",
+  "publication_status": "Prototype implementation assets. Final publication requires an approved M0 source snapshot.",
+  "technical_page_count": 2,
+  "visible_page_count": 5,
+  "visual_count": 29
+}

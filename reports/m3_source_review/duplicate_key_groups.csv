@@ -1,0 +1,10 @@
+state_id,lg_dt_code,row_count,distinct_full_row_count,exact_duplicate_group,conflicting_group,changing_columns,state_names,district_names,medium_values,micro_values,small_values,total_values,contains_gujarat
+34,600,3,3,False,True,district_name | medium | micro | small | total,PUDUCHERRY,MAHE | PONDICHERRY | YANAM,2 | 4 | 50,51144 | 725 | 797,22 | 27 | 533,51727 | 754 | 823,False
+8,100,2,2,False,True,district_name | medium | micro | small | total,RAJASTHAN,Anoopgarh | GANGANAGAR,0 | 66,108399 | 4145,10 | 824,109289 | 4155,False
+8,102,3,3,False,True,district_name | medium | micro | small | total,RAJASTHAN,Dudu | JAIPUR | Jaipur Gramin,0 | 1 | 593,1245 | 20425 | 577400,4 | 47 | 7484,1249 | 20473 | 585477,False
+8,104,2,2,False,True,district_name | medium | micro | small | total,RAJASTHAN,JALORE | Sanchor,0 | 5,1994 | 44185,235 | 7,2001 | 44425,False
+8,107,2,2,False,True,district_name | medium | micro | small | total,RAJASTHAN,JODHPUR | Jodhpur Gramin,118 | 2,191123 | 6153,19 | 2359,193600 | 6174,False
+8,113,2,2,False,True,district_name | medium | micro | small | total,RAJASTHAN,Gangapurcity | SAWAI MADHOPUR,0 | 3,2231 | 35523,232 | 7,2238 | 35758,False
+8,114,2,2,False,True,district_name | medium | micro | small | total,RAJASTHAN,Neem Ka Thana | SIKAR,1 | 18,126221 | 3436,12 | 611,126850 | 3449,False
+8,86,2,2,False,True,district_name | medium | micro | small | total,RAJASTHAN,AJMER | Kekri,0 | 73,152657 | 1724,1373 | 4,154103 | 1728,False
+8,92,2,2,False,True,district_name | medium | micro | small | total,RAJASTHAN,BHILWARA | Shahpura,0 | 87,134872 | 1387,1178 | 2,136137 | 1389,False

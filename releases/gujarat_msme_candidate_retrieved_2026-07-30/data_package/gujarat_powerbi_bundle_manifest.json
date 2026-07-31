@@ -1,0 +1,71 @@
+{
+  "base_columns": [
+    "state_name",
+    "state_id",
+    "district_name",
+    "lg_dt_code",
+    "medium",
+    "micro",
+    "small",
+    "total"
+  ],
+  "bundle_name": "Gujarat MSME Real Data Power BI Package",
+  "bundle_schema_version": "1.0",
+  "data_dictionary_row_count": 17,
+  "derived_columns": [
+    "district_rank_total",
+    "district_rank_total_ascending",
+    "micro_share_pct",
+    "small_share_pct",
+    "medium_share_pct",
+    "gujarat_total_share_pct",
+    "dominant_category",
+    "top_10_flag",
+    "bottom_10_flag"
+  ],
+  "district_row_count": 33,
+  "files": {
+    "data_dictionary": {
+      "file_name": "gujarat_msme_data_dictionary.csv",
+      "sha256": "87d299f30f6a44263e26489f070e834eaeecfc4cf2956b01db954bdc51dd5172",
+      "size_bytes": 1606
+    },
+    "district_data": {
+      "file_name": "gujarat_district_msme.csv",
+      "sha256": "8ad620c2e0e4e6db8564b10bc955add57db1e61bd2647d35de82f5fea3f414f7",
+      "size_bytes": 3372
+    },
+    "district_metadata": {
+      "file_name": "gujarat_district_msme.metadata.json",
+      "sha256": "2459d515957c97215e5c2a82afddcb36cc7b9145bc69a7144963bbf7a748a395",
+      "size_bytes": 2554
+    },
+    "district_rankings": {
+      "file_name": "gujarat_district_rankings.csv",
+      "sha256": "ac2bd5ac6a00e76f158ffafec1235afaf5c4d6cfd003801cf2fffe8f75a0e6ad",
+      "size_bytes": 2308
+    },
+    "executive_summary": {
+      "file_name": "gujarat_executive_summary.json",
+      "sha256": "ee83545826511ea73be0713a8ba7aca05c5eb8a56082b63eb529174410e12f73",
+      "size_bytes": 1499
+    }
+  },
+  "generated_at_utc": "2026-07-31T06:16:26+00:00",
+  "limitations": [
+    "The source is qualified only for Gujarat district-level aggregate analysis.",
+    "The national source contains nine conflicting state/district-code key groups.",
+    "The source provides no confirmed fixed reporting date.",
+    "The retrieval date must not be represented as the source reporting date.",
+    "Registration counts do not represent active businesses, revenue, profitability or employment."
+  ],
+  "ranking_row_count": 20,
+  "source": {
+    "file_name": "ogd_udyam_district_retrieved_2026-07-30.csv",
+    "qualification_status": "qualified_for_gujarat_scope_only",
+    "retrieval_date": "2026-07-30",
+    "sha256": "9236f99a4540c6215858c210970491a10462fb2027986232c64238cab76a0aca",
+    "source_as_of_date": null,
+    "source_id": "OGD_UDYAM_DISTRICT"
+  }
+}

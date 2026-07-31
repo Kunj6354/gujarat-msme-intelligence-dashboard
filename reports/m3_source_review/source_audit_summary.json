@@ -1,0 +1,86 @@
+{
+  "checksum_recorded_in_registry": false,
+  "detected_source_encoding": "utf-8-sig",
+  "duplicate_state_district_key_rows": 20,
+  "matching_registry_rows": [
+    {
+      "Any issue or limitation": "NO",
+      "How the data can be downloaded or extracted": "Direct download with CSV/JSON button on the resource page or needs a free API key from data.gov.in, added as api-key in the request.",
+      "access_date": "30/07/2026",
+      "dataset_name": "District-wise Total MSME Registered Enterprises under Udyam Registration",
+      "expected_use": "District totals and available geographic identifiers",
+      "fields_used": "state_name,state_id,district_name,lg_dt_code,medium,micro,small,total",
+      "licence": "Government Open Data License \u2013 India (GODL-India)",
+      "notes": "Confirm downloadable format, columns, latest update date, Gujarat coverage and licence",
+      "priority": "primary",
+      "publisher": "Open Government Data Platform India",
+      "source_as_of_date": "30/07/2026",
+      "source_id": "OGD_UDYAM_DISTRICT",
+      "source_url": "https://www.data.gov.in/resource/district-wise-total-msme-registered-enterprises-under-udyam-registration-till-last-date",
+      "status": "pending_validation",
+      "transformation": ""
+    }
+  ],
+  "national_district_code_count": 777,
+  "national_row_count": 788,
+  "national_state_count": 36,
+  "normalized_review_file": "prince_district_source.normalized_utf8.csv",
+  "normalized_review_sha256": "9236f99a4540c6215858c210970491a10462fb2027986232c64238cab76a0aca",
+  "null_counts": {},
+  "original_source_file": "prince_district_source.csv",
+  "original_source_sha256": "9236f99a4540c6215858c210970491a10462fb2027986232c64238cab76a0aca",
+  "pipeline_validation_error": "Duplicate rows found for key [state_id, lg_dt_code]: 20",
+  "prohibited_fields_present": [],
+  "registry_columns": [
+    "source_id",
+    "publisher",
+    "dataset_name",
+    "source_url",
+    "priority",
+    "expected_use",
+    "access_date",
+    "source_as_of_date",
+    "licence",
+    "How the data can be downloaded or extracted",
+    "fields_used",
+    "transformation",
+    "status",
+    "notes",
+    "Any issue or limitation"
+  ],
+  "required_columns": [
+    "state_name",
+    "state_id",
+    "district_name",
+    "lg_dt_code",
+    "medium",
+    "micro",
+    "small",
+    "total"
+  ],
+  "schema_matches_required_order": true,
+  "source_columns": [
+    "state_name",
+    "state_id",
+    "district_name",
+    "lg_dt_code",
+    "medium",
+    "micro",
+    "small",
+    "total"
+  ],
+  "source_columns_registry_columns": [
+    "source_id",
+    "original_column",
+    "column_description",
+    "data_type",
+    "required_for_mvp",
+    "example_value",
+    "notes"
+  ],
+  "structural_approval_blockers": [
+    "Pipeline validation failed: Duplicate rows found for key [state_id, lg_dt_code]: 20",
+    "Duplicate state/district-code key rows are present.",
+    "The original source checksum is not recorded in Prince's source registry."
+  ]
+}

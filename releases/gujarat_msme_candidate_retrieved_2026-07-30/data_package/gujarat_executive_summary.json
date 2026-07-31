@@ -1,0 +1,35 @@
+{
+  "average_registrations_per_district": 91765.67,
+  "district_count": 33,
+  "generated_at_utc": "2026-07-31T06:16:26+00:00",
+  "geography": "Gujarat",
+  "highest_registered_district": {
+    "district_name": "AHMADABAD",
+    "lg_dt_code": "438",
+    "total": 603761
+  },
+  "interpretation_warning": "Registration counts do not establish whether an enterprise is active, profitable or currently employing staff.",
+  "kpi_definitions": {
+    "average_registrations_per_district": "Gujarat registration total divided by the number of districts in the source dataset.",
+    "category_share_pct": "Category registration count divided by the Gujarat registration total, multiplied by 100.",
+    "total_registered_enterprises": "Sum of Micro, Small and Medium UDYAM registration counts across Gujarat districts."
+  },
+  "lowest_registered_district": {
+    "district_name": "DANG",
+    "lg_dt_code": "444",
+    "total": 2404
+  },
+  "medium_registered_enterprises": 4245,
+  "medium_share_pct": 0.1402,
+  "micro_registered_enterprises": 2969687,
+  "micro_share_pct": 98.0656,
+  "qualification_status": "qualified_for_gujarat_scope_only",
+  "retrieval_date": "2026-07-30",
+  "small_registered_enterprises": 54335,
+  "small_share_pct": 1.7943,
+  "source_as_of_date": null,
+  "source_file_name": "ogd_udyam_district_retrieved_2026-07-30.csv",
+  "source_id": "OGD_UDYAM_DISTRICT",
+  "source_sha256": "9236f99a4540c6215858c210970491a10462fb2027986232c64238cab76a0aca",
+  "total_registered_enterprises": 3028267
+}

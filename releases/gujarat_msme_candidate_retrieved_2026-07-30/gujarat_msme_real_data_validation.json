@@ -1,0 +1,29 @@
+{
+  "category_share_total_pct": 100.0,
+  "district_count": 33,
+  "gujarat_conflicting_key_group_count": 0,
+  "highest_registered_district": {
+    "district_name": "AHMADABAD",
+    "lg_dt_code": "438",
+    "total": 603761
+  },
+  "lowest_registered_district": {
+    "district_name": "DANG",
+    "lg_dt_code": "444",
+    "total": 2404
+  },
+  "national_conflicting_key_group_count": 9,
+  "national_conflicting_key_row_count": 20,
+  "publication_allowed": false,
+  "qualified_for_gujarat_scope": true,
+  "registration_totals": {
+    "medium": 4245,
+    "micro": 2969687,
+    "small": 54335,
+    "total": 3028267
+  },
+  "retrieval_date": "2026-07-30",
+  "source_as_of_date": null,
+  "source_sha256_verified": true,
+  "validation_schema_version": "1.0"
+}
