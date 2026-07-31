@@ -1,0 +1,19 @@
+{
+  "conflicting_duplicate_group_count": 9,
+  "conflicting_duplicate_row_count": 20,
+  "duplicate_key_group_count": 9,
+  "duplicate_key_row_count": 20,
+  "duplicate_state_district_name_code_rows": 0,
+  "duplicate_state_district_name_rows": 0,
+  "exact_deduplication_resolves_all_key_duplicates": false,
+  "exact_duplicate_group_count": 0,
+  "exact_duplicate_row_count": 0,
+  "gujarat_duplicate_group_count": 0,
+  "gujarat_duplicate_row_count": 0,
+  "registry_access_date": "30/07/2026",
+  "registry_dates_are_identical": true,
+  "registry_source_as_of_date": "30/07/2026",
+  "remaining_duplicate_key_rows_after_exact_deduplication": 20,
+  "rows_after_exact_row_deduplication": 788,
+  "source_row_count": 788
+}

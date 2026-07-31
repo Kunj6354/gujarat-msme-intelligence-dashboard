@@ -1,0 +1,72 @@
+{
+  "dashboard_implementation": {
+    "directory": "dashboard_implementation",
+    "manifest_file": "gujarat_msme_powerbi_implementation_manifest.json",
+    "technical_page_count": 2,
+    "visible_page_count": 5,
+    "visual_count": 29
+  },
+  "data_package": {
+    "directory": "data_package",
+    "file_count": 5,
+    "manifest_file": "gujarat_powerbi_bundle_manifest.json"
+  },
+  "district_count": 33,
+  "files": {
+    "dashboard_implementation_manifest": {
+      "relative_path": "dashboard_implementation/gujarat_msme_powerbi_implementation_manifest.json",
+      "sha256": "8742bf33741cdbe49aec6a61bac6f961a0e56935d7d14d6e2f7a5af3b2bcef78",
+      "size_bytes": 3787
+    },
+    "data_package_manifest": {
+      "relative_path": "data_package/gujarat_powerbi_bundle_manifest.json",
+      "sha256": "ce82b78e72b4e7af201fd6433d230fa214ce55c56dbde2081912ec41b9f0f391",
+      "size_bytes": 2406
+    },
+    "release_summary": {
+      "relative_path": "M3_REAL_DATA_RELEASE_SUMMARY.md",
+      "sha256": "cf863a34801464f529380995f7e3d7e5cdf238d3d5a033cd8672d9390419d1f8",
+      "size_bytes": 2087
+    },
+    "release_validation": {
+      "relative_path": "gujarat_msme_real_data_validation.json",
+      "sha256": "a5051df696e5e292c3bbd2ab02a6a2f0e2aa70b6bcd6b966498973ad981f0260",
+      "size_bytes": 748
+    },
+    "source_qualification": {
+      "relative_path": "source_qualification.json",
+      "sha256": "87815dc4be89bf43b29ad5654a8d9e120ee37f47617c5913bb14f1ffde6f29bf",
+      "size_bytes": 2800
+    }
+  },
+  "generated_at_utc": "2026-07-31T06:16:26+00:00",
+  "publication_allowed": false,
+  "registration_totals": {
+    "medium": 4245,
+    "micro": 2969687,
+    "small": 54335,
+    "total": 3028267
+  },
+  "release_name": "Gujarat MSME Real Dashboard Candidate",
+  "release_schema_version": "1.0",
+  "release_status": "candidate_for_internal_powerbi_validation",
+  "scope_validation": {
+    "encoding": "utf-8-sig",
+    "gujarat_conflicting_key_group_count": 0,
+    "gujarat_district_count": 33,
+    "gujarat_row_count": 33,
+    "gujarat_total": 3028267,
+    "national_conflicting_key_group_count": 9,
+    "national_conflicting_key_row_count": 20,
+    "national_row_count": 788,
+    "qualified_for_gujarat_scope": true
+  },
+  "source": {
+    "file_name": "ogd_udyam_district_retrieved_2026-07-30.csv",
+    "qualification_status": "qualified_for_gujarat_scope_only",
+    "retrieval_date": "2026-07-30",
+    "sha256": "9236f99a4540c6215858c210970491a10462fb2027986232c64238cab76a0aca",
+    "source_as_of_date": null,
+    "source_id": "OGD_UDYAM_DISTRICT"
+  }
+}

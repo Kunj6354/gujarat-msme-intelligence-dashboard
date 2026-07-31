@@ -1,0 +1,18 @@
+field_name,powerbi_data_type,field_origin,description,calculation
+state_name,text,source,State or union territory name.,
+state_id,text,source,State identifier supplied by the source.,
+district_name,text,source,District name supplied by the source.,
+lg_dt_code,text,source,Local Government Directory district code.,
+medium,whole_number,source,Registered Medium enterprises.,
+micro,whole_number,source,Registered Micro enterprises.,
+small,whole_number,source,Registered Small enterprises.,
+total,whole_number,source,Total registered enterprises.,micro + small + medium
+district_rank_total,whole_number,derived,District rank from highest to lowest total.,Descending rank of total
+district_rank_total_ascending,whole_number,derived,District rank from lowest to highest total.,Ascending rank of total
+micro_share_pct,decimal_number,derived,Micro registrations as a percentage of district total.,micro / total * 100
+small_share_pct,decimal_number,derived,Small registrations as a percentage of district total.,small / total * 100
+medium_share_pct,decimal_number,derived,Medium registrations as a percentage of district total.,medium / total * 100
+gujarat_total_share_pct,decimal_number,derived,District contribution to Gujarat registrations.,district total / Gujarat total * 100
+dominant_category,text,derived,Largest registration category in the district.,"Maximum of Micro, Small and Medium"
+top_10_flag,boolean,derived,Whether the district is in the Gujarat Top 10.,district_rank_total <= 10
+bottom_10_flag,boolean,derived,Whether the district is in the Gujarat Bottom 10.,district_rank_total_ascending <= 10

@@ -1,0 +1,19 @@
+criterion_id,page_id,category,acceptance_criterion,validation_method
+M2-001,executive_overview,KPI,All five Gujarat headline KPI cards display without blanks.,Compare visual values with the executive summary JSON.
+M2-002,executive_overview,Chart,The Top 10 chart shows no more than ten Gujarat districts.,Filter and count displayed district categories.
+M2-003,executive_overview,Interpretation,The page uses registration terminology consistently.,"Review all titles, subtitles and tooltips."
+M2-004,district_comparison,Ranking,District ranking is ordered from highest to lowest total.,Compare with district_rank_total.
+M2-005,district_comparison,Interaction,District selection filters all comparison visuals.,Select one district and inspect cross-filtering.
+M2-006,district_comparison,Contribution,District contribution percentages use the Gujarat total.,Compare visual values with gujarat_total_share_pct.
+M2-007,category_analysis,Composition,"Micro, Small and Medium shares total approximately 100%.",Validate selected district category percentages.
+M2-008,category_analysis,Dominance,Dominant-category filters match the generated field.,Compare slicer results with dominant_category.
+M2-009,category_analysis,Zero handling,Zero-registration districts show zero shares.,Test a zero-registration fixture when available.
+M2-010,data_availability,Limitations,Activity and employment gaps are displayed explicitly.,Review static notices on Page 4.
+M2-011,data_availability,Traceability,Source date and SHA-256 checksum are visible.,Compare with the metadata JSON.
+M2-012,data_availability,Governance,The page states that missing fields are not inferred.,Review limitation text.
+M2-013,sources_methodology,Source,"Primary source ID, file name and reporting date are shown.",Compare with the approved source registry entry.
+M2-014,sources_methodology,Methodology,Validation and transformation steps are documented.,Compare with generated metadata transformations.
+M2-015,sources_methodology,Dictionary,All fact-table fields appear in the field dictionary.,Compare with gujarat_msme_data_dictionary.csv.
+M2-016,all_pages,Branding,The prototype theme is applied consistently.,"Inspect fonts, backgrounds, borders and accent colours."
+M2-017,all_pages,Privacy,No identifiable enterprise-level fields are present.,Inspect the Power BI model and all visuals.
+M2-018,all_pages,Performance,Page visuals render without avoidable duplicate datasets.,Use Power BI Performance Analyzer.

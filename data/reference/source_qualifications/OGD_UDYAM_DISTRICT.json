@@ -1,0 +1,55 @@
+{
+  "qualification_schema_version": "1.0",
+  "source_id": "OGD_UDYAM_DISTRICT",
+  "publisher": "Open Government Data Platform India",
+  "dataset_name": "District-wise Total MSME Registered Enterprises under Udyam Registration till last date",
+  "source_url": "https://www.data.gov.in/resource/district-wise-total-msme-registered-enterprises-under-udyam-registration-till-last-date",
+  "licence": "Government Open Data License - India (GODL-India)",
+  "publication_date": "2021-11-01",
+  "retrieval_date": "2026-07-30",
+  "source_as_of_date": null,
+  "source_as_of_note": "The reviewed resource is described as a rolling 'till last date' dataset. A fixed snapshot date was not supplied in the reviewed resource metadata. The retrieval date must not be represented as the source reporting date.",
+  "source_file": "data/raw/ogd_udyam_district_retrieved_2026-07-30.csv",
+  "source_sha256": "9236f99a4540c6215858c210970491a10462fb2027986232c64238cab76a0aca",
+  "source_encoding": "utf-8-sig",
+  "privacy_classification": "public_aggregate_district_data",
+  "qualification_status": "qualified_for_gujarat_scope_only",
+  "permitted_scope": [
+    "Gujarat district-level aggregate analysis",
+    "Gujarat Power BI dashboard data generation"
+  ],
+  "prohibited_scope": [
+    "National district-level analysis using state_id and lg_dt_code as a unique key",
+    "Automatic deletion or reconciliation of conflicting national rows",
+    "Enterprise-level analysis"
+  ],
+  "validation_summary": {
+    "national_row_count": 788,
+    "national_state_count": 36,
+    "national_unique_district_code_count": 777,
+    "national_conflicting_key_group_count": 9,
+    "national_conflicting_key_row_count": 20,
+    "gujarat_conflicting_key_group_count": 0,
+    "gujarat_conflicting_key_row_count": 0,
+    "prohibited_enterprise_fields_present": [],
+    "null_counts": {}
+  },
+  "approved_processing_policy": {
+    "policy_name": "gujarat_scope_first_validation",
+    "steps": [
+      "Validate the required aggregate schema and row-level numeric rules.",
+      "Preserve all original national rows in the raw source file.",
+      "Filter records to Gujarat before enforcing district-key uniqueness.",
+      "Run strict Gujarat subset validation.",
+      "Record national duplicate conflicts as a source limitation.",
+      "Do not publish national district results from this source."
+    ]
+  },
+  "evidence_files": [
+    "reports/m3_source_review/M3_PRINCE_SOURCE_AUDIT.md",
+    "reports/m3_source_review/M3_DUPLICATE_CLASSIFICATION.md",
+    "reports/m3_source_review/duplicate_key_groups.csv",
+    "reports/m3_source_review/duplicate_rows_conflicting.csv"
+  ],
+  "publication_status": "Not yet released. Real dashboard output requires successful M3 scoped extraction, KPI verification and release-manifest validation."
+}
