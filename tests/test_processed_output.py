@@ -4,6 +4,7 @@ from pathlib import Path
 import pandas as pd
 import pytest
 
+from msme_dashboard.district_metrics import DERIVED_COLUMNS
 from msme_dashboard.file_inventory import sha256_file
 from msme_dashboard.processed_output import (
     create_output_metadata,
@@ -94,6 +95,7 @@ def test_create_output_metadata_records_provenance(
     assert metadata["district_count"] == 2
     assert metadata["registration_totals"]["total"] == 333
     assert metadata["generated_at_utc"].endswith("+00:00")
+    assert metadata["derived_columns"] == []
 
 
 def test_write_processed_outputs_creates_csv_and_json(
@@ -124,8 +126,8 @@ def test_write_processed_outputs_creates_csv_and_json(
     )
 
     assert list(processed["district_name"]) == [
-        "AHMEDABAD",
         "VADODARA",
+        "AHMEDABAD",
     ]
     assert set(processed["state_name"]) == {"GUJARAT"}
     assert len(processed) == 2
@@ -133,6 +135,7 @@ def test_write_processed_outputs_creates_csv_and_json(
     saved_metadata = json.loads(metadata_json.read_text(encoding="utf-8"))
 
     assert saved_metadata == returned_metadata
+    assert saved_metadata["derived_columns"] == list(DERIVED_COLUMNS)
     assert saved_metadata["row_count"] == 2
     assert saved_metadata["district_count"] == 2
     assert saved_metadata["registration_totals"]["total"] == 333
@@ -167,4 +170,5 @@ def test_processed_csv_has_expected_column_order(
         "micro",
         "small",
         "total",
+        *DERIVED_COLUMNS,
     ]

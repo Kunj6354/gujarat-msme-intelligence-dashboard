@@ -114,8 +114,8 @@ def test_cli_output_contains_only_gujarat(
 
     assert set(processed["state_name"]) == {"GUJARAT"}
     assert list(processed["district_name"]) == [
-        "AHMEDABAD",
         "VADODARA",
+        "AHMEDABAD",
     ]
 
 
