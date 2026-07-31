@@ -1,0 +1,99 @@
+// Gujarat MSME Intelligence Dashboard
+// Power BI measure library
+// Main table: Gujarat MSME Districts
+
+Total Registered Enterprises =
+SUM('Gujarat MSME Districts'[total])
+
+Micro Registered Enterprises =
+SUM('Gujarat MSME Districts'[micro])
+
+Small Registered Enterprises =
+SUM('Gujarat MSME Districts'[small])
+
+Medium Registered Enterprises =
+SUM('Gujarat MSME Districts'[medium])
+
+District Count =
+DISTINCTCOUNT('Gujarat MSME Districts'[lg_dt_code])
+
+Average Registrations per District =
+DIVIDE(
+    [Total Registered Enterprises],
+    [District Count],
+    0
+)
+
+Micro Share % =
+DIVIDE(
+    [Micro Registered Enterprises],
+    [Total Registered Enterprises],
+    0
+)
+
+Small Share % =
+DIVIDE(
+    [Small Registered Enterprises],
+    [Total Registered Enterprises],
+    0
+)
+
+Medium Share % =
+DIVIDE(
+    [Medium Registered Enterprises],
+    [Total Registered Enterprises],
+    0
+)
+
+Selected District Contribution % =
+DIVIDE(
+    SUM('Gujarat MSME Districts'[total]),
+    CALCULATE(
+        [Total Registered Enterprises],
+        REMOVEFILTERS(
+            'Gujarat MSME Districts'[district_name],
+            'Gujarat MSME Districts'[lg_dt_code]
+        )
+    ),
+    0
+)
+
+Highest Registered District =
+MAXX(
+    TOPN(
+        1,
+        ALLSELECTED('Gujarat MSME Districts'),
+        'Gujarat MSME Districts'[total],
+        DESC,
+        'Gujarat MSME Districts'[district_name],
+        ASC
+    ),
+    'Gujarat MSME Districts'[district_name]
+)
+
+Lowest Registered District =
+MAXX(
+    TOPN(
+        1,
+        ALLSELECTED('Gujarat MSME Districts'),
+        'Gujarat MSME Districts'[total],
+        ASC,
+        'Gujarat MSME Districts'[district_name],
+        ASC
+    ),
+    'Gujarat MSME Districts'[district_name]
+)
+
+Top 10 District Flag =
+IF(
+    MIN('Gujarat MSME Districts'[district_rank_total]) <= 10,
+    1,
+    0
+)
+
+Bottom 10 District Flag =
+IF(
+    MIN('Gujarat MSME Districts'[district_rank_total_ascending]) <= 10,
+    1,
+    0
+)

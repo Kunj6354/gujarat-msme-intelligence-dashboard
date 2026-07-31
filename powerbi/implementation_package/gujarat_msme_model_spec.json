@@ -1,0 +1,125 @@
+{
+  "formatting": {
+    "display_units": "None",
+    "identifier_columns_as_text": [
+      "state_id",
+      "lg_dt_code"
+    ],
+    "percentage_columns": [
+      "micro_share_pct",
+      "small_share_pct",
+      "medium_share_pct",
+      "gujarat_total_share_pct"
+    ],
+    "percentage_decimal_places": 2,
+    "thousands_separator": true,
+    "whole_number_columns": [
+      "medium",
+      "micro",
+      "small",
+      "total",
+      "district_rank_total",
+      "district_rank_total_ascending"
+    ]
+  },
+  "governance": [
+    "No enterprise-level identifiable data is loaded.",
+    "Registration counts are not active-business counts.",
+    "Unsupported fields are not inferred.",
+    "LGD codes remain text identifiers.",
+    "Different reporting snapshots are not silently combined."
+  ],
+  "implementation_schema_version": "1.0",
+  "model_name": "Gujarat MSME Intelligence Model",
+  "refresh": {
+    "mode": "Manual during prototype phase",
+    "required_before_refresh": [
+      "Source remains approved in the registry.",
+      "Source reporting date is confirmed.",
+      "Source schema passes pipeline validation.",
+      "Generated bundle manifest passes validation."
+    ],
+    "source_integrity_check": "SHA-256 checksum"
+  },
+  "relationships": [],
+  "storage_mode": "Import",
+  "tables": {
+    "bundle_manifest": {
+      "grain": "One record per generated bundle.",
+      "hidden": true,
+      "load_enabled": true,
+      "powerbi_name": "Bundle Manifest",
+      "source_file": "gujarat_powerbi_bundle_manifest.json",
+      "table_role": "disconnected_reference"
+    },
+    "dataset_metadata": {
+      "grain": "One record per generated dataset.",
+      "hidden": true,
+      "load_enabled": true,
+      "powerbi_name": "Dataset Metadata",
+      "source_file": "gujarat_district_msme.metadata.json",
+      "table_role": "disconnected_reference"
+    },
+    "district_fact": {
+      "default_sort": [
+        {
+          "column": "district_name",
+          "sort_by": "district_rank_total"
+        }
+      ],
+      "grain": "One row per Gujarat district for one approved source snapshot.",
+      "hidden_columns": [
+        "state_name",
+        "state_id",
+        "district_rank_total_ascending",
+        "top_10_flag",
+        "bottom_10_flag"
+      ],
+      "key_columns": [
+        "state_id",
+        "lg_dt_code"
+      ],
+      "load_enabled": true,
+      "powerbi_name": "Gujarat MSME Districts",
+      "source_file": "gujarat_district_msme.csv",
+      "table_role": "fact"
+    },
+    "field_dictionary": {
+      "grain": "One row per output field.",
+      "hidden": false,
+      "load_enabled": true,
+      "powerbi_name": "Field Dictionary",
+      "source_file": "gujarat_msme_data_dictionary.csv",
+      "table_role": "reference"
+    },
+    "measures": {
+      "grain": "No analytical rows.",
+      "hidden": false,
+      "load_enabled": true,
+      "powerbi_name": "_Measures",
+      "source_file": null,
+      "table_role": "measure_table"
+    }
+  },
+  "technical_pages": [
+    {
+      "display_name": "District Tooltip",
+      "hidden": true,
+      "page_id": "district_tooltip",
+      "page_type": "tooltip"
+    },
+    {
+      "display_name": "District Detail",
+      "hidden": true,
+      "page_id": "district_drillthrough",
+      "page_type": "drillthrough"
+    }
+  ],
+  "visible_report_pages": [
+    "executive_overview",
+    "district_comparison",
+    "category_analysis",
+    "data_availability",
+    "sources_methodology"
+  ]
+}
